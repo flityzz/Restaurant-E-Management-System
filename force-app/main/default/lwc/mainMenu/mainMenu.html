@@ -1,3 +1,23 @@
 <template>
-    
-</template>
+    <div class="listContainer slds-grid slds-wrap slds-grid_align-center slds-grid_vertical-align-center ">
+      <template if:true={products.data}>
+        <template for:each={products.data} for:item="product">
+          <div key={product.Id} class="slds-col slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-3 ">
+            <div class="card">
+              <figure>
+                <img src="https://static2.cilory.com/189111-thickbox_default/no-logo-royal-blue-full-sleeves-henley-t-shirt.jpg" alt="t-shirt">
+              </figure>
+              <section class="details">
+                <div class="min-details">
+                  <h1>{product.Name} <span>{product.ProductCode} - {product.Description}</span></h1>
+                  <h1 class="price">$45.99</h1>
+                </div>
+                <a href="#" class="btn">add to cart</a>
+              </section>
+            </div>
+          </div>
+        </template>
+      </template>
+    </div>
+  </template>
+  
